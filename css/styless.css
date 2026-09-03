@@ -1950,3 +1950,29 @@ body {
     margin-bottom: 10px;
 }
 
+/* ปรับขนาดรูปภาพ */
+.detail-img {
+  width: 60%;          /* ปรับความกว้าง */
+  max-width: 800px;    /* จำกัดขนาด */
+  height: auto;        /* สัดส่วนภาพ */
+  display: block;
+  margin: 20px auto;   /* กลางจอ */
+}
+
+/* ปุ่มย้อนกลับมุมล่างซ้าย */
+.back-button {
+  position: fixed;     /* ไว้มุมล่างซ้าย */
+  bottom: 20px;
+  left: 20px;
+  display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  background-color: #cc5200;
+}
