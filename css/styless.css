@@ -175,7 +175,7 @@ body {
   line-height: 1.4;
 }
 
-/* NEWS SECTION */
+/* NEWS SECTION (ชุดโค้ดปรับปรุงสมบูรณ์) */
 .news-section {
   padding: 40px 60px;
   background-color: #ffffff;
@@ -197,6 +197,12 @@ body {
   color: #e05315;
   text-decoration: none;
   font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.view-all:hover {
+  color: #a3320b;
+  text-decoration: underline;
 }
 
 .news-grid {
@@ -210,19 +216,29 @@ body {
   border-radius: 8px;
   overflow: hidden;
   background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* เอฟเฟกต์เมื่อวางเมาส์เหนือการ์ด */
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับปรุงกล่องและรูปภาพให้ขยายเต็มกรอบสวยงาม */
 .news-img-box {
-  height: 140px;
+  width: 100%;
+  height: 180px; /* ปรับความสูงกรอบรูปตามต้องการ */
   background-color: #1e293b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 .news-img-box img {
-  width: 60px;
-  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ขยายภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
+  object-position: center;
+  display: block;
 }
 
 .news-content {
@@ -232,18 +248,31 @@ body {
 .news-date {
   font-size: 11px;
   color: #e05315;
+  font-weight: 500;
 }
 
 .news-content h3 {
   font-size: 14px;
   margin: 6px 0;
   color: #0f172a;
+  line-height: 1.4;
 }
 
 .news-content p {
   font-size: 12px;
   color: #64748b;
   line-height: 1.4;
+}
+
+/* รองรับการแสดงผลบนสมาร์ตโฟน */
+@media (max-width: 768px) {
+  .news-section {
+    padding: 24px 20px;
+  }
+  
+  .news-grid {
+    flex-direction: column;
+  }
 }
 
 /* SCHEDULE SECTION */
